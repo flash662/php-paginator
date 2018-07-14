@@ -286,7 +286,7 @@ class Paginator
 
         foreach ($this->getPages() as $page) {
             if ($page['url']) {
-                $html .= '<li' . ($page['isCurrent'] ? ' class="page-item active"' : ' class="page-item"') . '><a href="' . htmlspecialchars($page['url']) . '">' . htmlspecialchars($page['num']) . '</a></li>';
+                $html .= '<li' . ($page['isCurrent'] ? ' class="page-item active"' : ' class="page-item"') . '><a class="page-link" href="' . htmlspecialchars($page['url']) . '">' . htmlspecialchars($page['num']) . '</a></li>';
             } else {
                 $html .= '<li class="page-item disabled"><span>' . htmlspecialchars($page['num']) . '</span></li>';
             }
